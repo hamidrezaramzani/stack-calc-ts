@@ -1,0 +1,1 @@
+const commands : string[] = ["+" , "*" , "/" , "POP" , "DUP" , "PSH"  , "END"];
