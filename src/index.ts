@@ -43,6 +43,10 @@ function doOperation(operand: string): void {
   });
 }
 
+function duplicateLastNumber() {
+  stack[stack.length - 1] = stack[stack.length - 1] * 2;
+}
+
 // run app
 function run() {
   getInput().then(({ input }: ResponseInputType) => {
@@ -59,6 +63,12 @@ function run() {
         doOperation("+");
       case "-":
         doOperation("-");
+      case "*":
+        doOperation("*");
+      case "/":
+        doOperation("/");
+      case "DUP":
+        duplicateLastNumber();
     }
 
     console.log(stack[stack.length - 1]);
