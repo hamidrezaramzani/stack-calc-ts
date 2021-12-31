@@ -47,6 +47,10 @@ function duplicateLastNumber() {
   stack[stack.length - 1] = stack[stack.length - 1] * 2;
 }
 
+function removeLastNumber() {
+  stack.pop();
+}
+
 // run app
 function run() {
   getInput().then(({ input }: ResponseInputType) => {
@@ -69,9 +73,12 @@ function run() {
         doOperation("/");
       case "DUP":
         duplicateLastNumber();
+      case "POP":
+        removeLastNumber();
     }
 
-    console.log(stack[stack.length - 1]);
+    if (stack.length) console.log(stack[stack.length - 1]);
+    else console.log("Empty");
 
     run();
   });
