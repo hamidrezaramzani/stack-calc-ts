@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const commands: string[] = ["+", "*", "/", "-", "POP", "DUP", "PSH", "END"];
-let stack: (string | number)[] = [];
+let stack: number[] = [];
 type QuestionTypes = {
   name: string;
   message: string;
@@ -65,16 +65,22 @@ function run() {
       // sum all the array numbers together and assign array with it's number
       case "+":
         doOperation("+");
+        break;
       case "-":
         doOperation("-");
+        break;
       case "*":
         doOperation("*");
+        break;
       case "/":
         doOperation("/");
+        break;
       case "DUP":
         duplicateLastNumber();
+        break;
       case "POP":
         removeLastNumber();
+        break;
     }
 
     if (stack.length) console.log(stack[stack.length - 1]);

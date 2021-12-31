@@ -50,16 +50,22 @@ function run() {
             // sum all the array numbers together and assign array with it's number
             case "+":
                 doOperation("+");
+                break;
             case "-":
                 doOperation("-");
+                break;
             case "*":
                 doOperation("*");
+                break;
             case "/":
                 doOperation("/");
+                break;
             case "DUP":
                 duplicateLastNumber();
+                break;
             case "POP":
                 removeLastNumber();
+                break;
         }
         if (stack.length)
             console.log(stack[stack.length - 1]);
